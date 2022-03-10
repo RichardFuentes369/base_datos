@@ -1,6 +1,6 @@
 # base_datos
 -- actualiza un consecutivo, ejemplo id <br><br>
-   UPDATE users as a, (SELECT @numeroConsecutivo:= (SELECT max(id) FROM users)) as tabla SET a.id=@numeroConsecutivo:=@numeroConsecutivo+1; <br>
+   UPDATE users as a, (SELECT @numeroConsecutivo:= (SELECT max(id) FROM users)) as tabla SET a.id=@numeroConsecutivo:=@numeroConsecutivo+1; <br><br>
    pongo un id en 0 <br><br>
    UPDATE users as a, (SELECT @numeroConsecutivo:= (SELECT min(id) FROM users)) as tabla SET a.id=@numeroConsecutivo:=@numeroConsecutivo+1; <br><br>
 -- actualiza un consecutivo, de llave foránea <br><br>
